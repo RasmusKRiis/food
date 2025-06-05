@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+    }
     // Main elements
     const mainRandomBtn = document.getElementById("random-recipe-btn");
     const secondaryRandomBtn = document.getElementById("random-recipe-btn-secondary");
@@ -20,6 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const cookbookOverlay = document.getElementById("cookbook-overlay");
     const closeOverlayBtn = document.getElementById("back-btn-overlay"); // Reusing back button to close overlay
 
+    function fetchRecipesData() {
+        if (window.recipesData) {
+            return Promise.resolve(window.recipesData);
+        }
+        return fetch("recipes.json").then(r => r.json());
+    }
+
     /**
      * Function to pick a random recipe based on filters
      */
@@ -31,8 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const excludeNonWeb = document.getElementById("exclude-non-web").checked;
       
         // Load JSON
-        fetch("recipes.json")
-          .then((response) => response.json())
+        fetchRecipesData()
           .then((data) => {
             let recipes = data.recipes;
             const query = searchBar.value.trim().toLowerCase();
@@ -111,8 +120,7 @@ if (isSelfHosted) {
      * Function to get filtered recipes
      */
     function getFilteredRecipes() {
-        return fetch("recipes.json")
-          .then((response) => response.json())
+        return fetchRecipesData()
           .then((data) => {
             let recipes = data.recipes;
             const query = searchBar.value.trim().toLowerCase();
