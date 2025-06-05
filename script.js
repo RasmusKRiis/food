@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Plus and Week buttons in the header
     const plusButton = document.getElementById("plus-button");
     const weekButton = document.getElementById("week-button");
+
+    const listButton = document.getElementById("list-button");
+
     const searchBar = document.getElementById("search-bar");
   
     // Recipe fields
@@ -23,11 +26,42 @@ document.addEventListener("DOMContentLoaded", () => {
     const cookbookOverlay = document.getElementById("cookbook-overlay");
     const closeOverlayBtn = document.getElementById("back-btn-overlay"); // Reusing back button to close overlay
 
+
+    // List Overlay
+    const recipesListOverlay = document.getElementById("recipes-list-overlay");
+    const closeListOverlayBtn = document.getElementById("close-list-overlay");
+    const recipesList = document.getElementById("recipes-list");
+
     function fetchRecipesData() {
         if (window.recipesData) {
             return Promise.resolve(window.recipesData);
         }
         return fetch("recipes.json").then(r => r.json());
+    }
+
+    /**
+     * Populate the overlay with a list of all recipes
+     */
+    function populateRecipesList() {
+        fetchRecipesData().then(data => {
+            recipesList.innerHTML = "";
+            data.recipes.forEach(r => {
+                const li = document.createElement("li");
+                if (r.location) {
+                    const isSelf = r.location.startsWith("recipes/self/");
+                    const link = document.createElement("a");
+                    link.textContent = r.name;
+                    link.target = "_blank";
+                    link.href = isSelf ? `https://rasmuskoriis.github.io/food/${r.location}` : r.location;
+                    link.style.color = "#ff820e";
+                    link.style.textDecoration = "none";
+                    li.appendChild(link);
+                } else {
+                    li.textContent = r.name;
+                }
+                recipesList.appendChild(li);
+            });
+        });
     }
 
     /**
@@ -105,10 +139,11 @@ if (isSelfHosted) {
             // Change button labels for recipe display
             plusButton.textContent = '➕'; // Change from info to save icon
             weekButton.textContent = '📧'; // Change to email icon
-  
+
             // Optionally, change button positions if needed
             plusButton.classList.add("bottom-position");
             weekButton.classList.add("bottom-position");
+            listButton.classList.add("bottom-position");
           })
           .catch((error) => {
             console.error("Error fetching recipes:", error);
@@ -293,6 +328,17 @@ if (isSelfHosted) {
             // Recipe display: send saved recipes via email
             sendSavedRecipesEmail();
         }
+    });
+
+    // List button (header)
+    listButton.addEventListener("click", () => {
+        populateRecipesList();
+        recipesListOverlay.classList.remove("hidden-overlay");
+    });
+
+    // Close list overlay
+    closeListOverlayBtn.addEventListener("click", () => {
+        recipesListOverlay.classList.add("hidden-overlay");
     });
 
       /**

@@ -37,12 +37,16 @@
     </div>
     <input type="text" id="search-bar" aria-label="Search recipes" placeholder="Search recipes" />
 
-    <!-- A separate container for the two buttons -->
+    <!-- A separate container for the buttons -->
     <div id="button-row">
       <!-- Info/Save button -->
       <button id="plus-button" class="plus-button" aria-label="Info">ℹ️</button>
       <!-- Week plan button -->
       <button id="week-button" class="week-button" aria-label="Send plan">📧</button>
+
+      <!-- List button -->
+      <button id="list-button" class="list-button" aria-label="All recipes">📃</button>
+
     </div>
   </header>
 
@@ -83,6 +87,15 @@
 
       </ul>
       <button id="back-btn-overlay" class="small-random-btn">Back</button>
+    </div>
+  </div>
+
+  <!-- Overlay listing all recipes -->
+  <div id="recipes-list-overlay" class="overlay hidden-overlay">
+    <div class="overlay-content">
+      <h2>All Recipes</h2>
+      <ul id="recipes-list"></ul>
+      <button id="close-list-overlay" class="small-random-btn">Back</button>
     </div>
   </div>
 
