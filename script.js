@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Plus and Week buttons in the header
     const plusButton = document.getElementById("plus-button");
     const weekButton = document.getElementById("week-button");
+
     const listButton = document.getElementById("list-button");
+
     const searchBar = document.getElementById("search-bar");
   
     // Recipe fields
@@ -23,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Cookbook Overlay
     const cookbookOverlay = document.getElementById("cookbook-overlay");
     const closeOverlayBtn = document.getElementById("back-btn-overlay"); // Reusing back button to close overlay
+
 
     // List Overlay
     const recipesListOverlay = document.getElementById("recipes-list-overlay");
