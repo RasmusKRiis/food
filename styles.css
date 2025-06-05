@@ -75,6 +75,27 @@
     transform: scale(1.1);
     box-shadow: 0 6px 16px rgba(239, 71, 111, 0.5);
   }
+
+  .list-button {
+    position: absolute;
+    top: 130px;
+    left: 10px;
+    background-color: #FFD166;
+    color: #073B4C;
+    font-size: 2rem;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(239, 71, 111, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .list-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(239, 71, 111, 0.5);
+  }
   
   /***************************
    * HEADER & FILTERS
@@ -90,6 +111,16 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+  }
+
+  #search-bar {
+    margin-top: 1em;          /* lower position on larger screens */
+    padding: 0.6em 0.8em;     /* slightly bigger input */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1.1rem;
+    max-width: 300px;
+    width: 100%;
   }
   
   /***************************
@@ -283,7 +314,15 @@
 /***************************
  * Responsive Design for Mobile
  ****************************/
- @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+
+  /* Move search bar slightly upward and shrink it */
+  #search-bar {
+    margin-top: 0.2em;
+    padding: 0.4em 0.6em;
+    max-width: 85%;
+    font-size: 1rem;
+  }
   
   /* 1. Show them in normal flow */
   .plus-button,
@@ -312,7 +351,7 @@
   }
 
   /* Remove .plus-button's desktop top/left if needed */
-  .plus-button, .week-button {
+  .plus-button, .week-button, .list-button {
     top: auto !important;
     left: auto !important;
   }
@@ -338,12 +377,25 @@
     font-size: 3rem;  /* Button text size */
     border-radius: 50%; /* Keep button circular */
     margin: 0;        /* Reset any inherited margin */
-    z-index: 3200; 
+    z-index: 3200;
+  }
+
+  .list-button.bottom-position {
+    position: fixed;
+    bottom: 260px;
+    right: 20px;
+    width: 95px;
+    height: 95px;
+    font-size: 3rem;
+    border-radius: 50%;
+    margin: 0;
+    z-index: 3200;
   }
   
   /* remove the top/left lines if needed */
   .plus-button,
-  .week-button {
+  .week-button,
+  .list-button {
     top: auto;
     left: auto;
   }
@@ -493,7 +545,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 9999;
 
   /* Let the entire overlay scroll if content is tall */
@@ -536,6 +588,10 @@
   list-style: none;
 }
 
+#recipes-list li {
+  margin: 0.3em 0;
+}
+
 
 /***************************
  * CLOSE OVERLAY BUTTON
@@ -556,6 +612,84 @@
 .close-overlay-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(239, 71, 111, 0.5);
+}
+
+/***************************
+ * Recipe Detail Pages
+ ****************************/
+.recipe-page {
+  background: #fff8f0;
+  margin: 0;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
+  color: #3a2a1e;
+}
+
+.recipe-container {
+  background: #fff;
+  max-width: 540px;
+  margin: 40px auto 0 auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 22px;
+  box-shadow: 0 4px 24px 0 rgba(255,130,14,0.06), 0 1.5px 6px 0 rgba(255,130,14,0.09);
+  border: 1.5px solid #ffe2c6;
+}
+
+@media (max-width: 600px) {
+  .recipe-container {
+    max-width: 98vw;
+    margin: 0.5em auto 0 auto;
+    padding: 1.1em 0.5em 1.7em 0.5em;
+    border-radius: 13px;
+  }
+  .recipe-container h1 {
+    font-size: 1.3em;
+  }
+  .recipe-container p,
+  .recipe-container li,
+  .recipe-container ol {
+    font-size: 1em;
+  }
+}
+
+.recipe-container h1 {
+  color: #ff820e;
+  margin-top: 0;
+  margin-bottom: 0.7em;
+  font-size: 2.1em;
+  letter-spacing: 0.01em;
+}
+
+.recipe-container p,
+.recipe-container li,
+.recipe-container ol {
+  color: #6b4c28;
+  font-size: 1.08em;
+  line-height: 1.7;
+}
+
+.recipe-body ol,
+.recipe-body ul {
+  margin-left: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.recipe-body li {
+  margin-bottom: 0.4em;
+}
+
+.recipe-body {
+  margin-top: 1.5em;
+}
+
+.recipe-container hr {
+  border: none;
+  border-top: 1.5px solid #ffe2c6;
+  margin: 1.5em 0;
+}
+
+.recipe-container strong {
+  color: #ff820e;
+  font-weight: 600;
 }
 
   

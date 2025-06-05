@@ -6,6 +6,8 @@
   <title>Random Recipe Picker</title>
   <!-- Link to external CSS -->
   <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#118AB2" />
 </head>
 <body>
 
@@ -14,32 +16,35 @@
     <div id="filter-container">
       <!-- Meat Toggle -->
       <label class="toggle-switch">
-        <input type="checkbox" id="exclude-meat" />
+        <input type="checkbox" id="exclude-meat" aria-label="Exclude meat" />
         <span class="switch-slider">🥩</span>
       </label>
       <!-- Fish Toggle -->
       <label class="toggle-switch">
-        <input type="checkbox" id="exclude-fish" />
+        <input type="checkbox" id="exclude-fish" aria-label="Exclude fish" />
         <span class="switch-slider">🐟</span>
       </label>
       <!-- Vegetarian Toggle -->
       <label class="toggle-switch">
-        <input type="checkbox" id="exclude-vegetarian" />
+        <input type="checkbox" id="exclude-vegetarian" aria-label="Exclude vegetarian" />
         <span class="switch-slider">🍆</span>
       </label>
       <!-- Non-web Toggle -->
       <label class="toggle-switch">
-        <input type="checkbox" id="exclude-non-web" />
+        <input type="checkbox" id="exclude-non-web" aria-label="Exclude non-web" />
         <span class="switch-slider">📖</span>
       </label>
     </div>
+    <input type="text" id="search-bar" aria-label="Search recipes" placeholder="Search recipes" />
 
-    <!-- A separate container for the two buttons -->
+    <!-- A separate container for the buttons -->
     <div id="button-row">
-      <!-- Info/Plus sign -->
-      <button id="plus-button" class="plus-button">i</button>
-      <!-- Infinity Button (Dinner for a Week) -->
-      <button id="week-button" class="week-button">+</button>
+      <!-- Info/Save button -->
+      <button id="plus-button" class="plus-button" aria-label="Info">ℹ️</button>
+      <!-- Week plan button -->
+      <button id="week-button" class="week-button" aria-label="Send plan">📧</button>
+      <!-- List button -->
+      <button id="list-button" class="list-button" aria-label="All recipes">📃</button>
     </div>
   </header>
 
@@ -49,9 +54,9 @@
       <h2>How to Use</h2>
       <ul>
         <li><strong>Let’s Eat:</strong> Discover a new recipe.</li>
-        <li><strong>+</strong> Save your favorite recipes.</li>	
-        <li><strong>></strong> Email your weekly meal plan and reset saved recipes.</li>
-        <li><strong>Front Page +:</strong> Get 7 random recipes.</li>
+        <li><strong>➕</strong> Save your favorite recipes.</li>
+        <li><strong>📧</strong> Email your weekly meal plan and reset saved recipes.</li>
+        <li><strong>Front Page 📧:</strong> Get 7 random recipes.</li>
       </ul>
       <h2>Cookbooks</h2>
       <p>	
@@ -83,6 +88,15 @@
     </div>
   </div>
 
+  <!-- Overlay listing all recipes -->
+  <div id="recipes-list-overlay" class="overlay hidden-overlay">
+    <div class="overlay-content">
+      <h2>All Recipes</h2>
+      <ul id="recipes-list"></ul>
+      <button id="close-list-overlay" class="small-random-btn">Back</button>
+    </div>
+  </div>
+
   <main>
     <!-- Big Button in the Center -->
     <button id="random-recipe-btn">Let´s Eat</button>
@@ -101,6 +115,7 @@
   </section>
 
 
+  <script src="recipes-data.js"></script>
   <!-- Link to external JS -->
   <script src="script.js"></script>
 </body>
