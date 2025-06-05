@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Plus and Week buttons in the header
     const plusButton = document.getElementById("plus-button");
     const weekButton = document.getElementById("week-button");
+    const searchBar = document.getElementById("search-bar");
   
     // Recipe fields
     const recipeName = document.getElementById("recipe-name");
@@ -34,6 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
           .then((response) => response.json())
           .then((data) => {
             let recipes = data.recipes;
+            const query = searchBar.value.trim().toLowerCase();
+            if (query) {
+              recipes = recipes.filter((r) =>
+                r.name.toLowerCase().includes(query)
+              );
+            }
       
             // Apply filters
             if (excludeMeat) {
@@ -87,8 +94,8 @@ if (isSelfHosted) {
             mainRandomBtn.style.display = "none";
   
             // Change button labels for recipe display
-            plusButton.textContent = '+'; // Change from 'i' to '+'
-            weekButton.textContent = '>'; // Change from '+' to '>'
+            plusButton.textContent = '➕'; // Change from info to save icon
+            weekButton.textContent = '📧'; // Change to email icon
   
             // Optionally, change button positions if needed
             plusButton.classList.add("bottom-position");
@@ -108,7 +115,13 @@ if (isSelfHosted) {
           .then((response) => response.json())
           .then((data) => {
             let recipes = data.recipes;
-      
+            const query = searchBar.value.trim().toLowerCase();
+            if (query) {
+              recipes = recipes.filter((r) =>
+                r.name.toLowerCase().includes(query)
+              );
+            }
+
             const excludeMeat = document.getElementById("exclude-meat").checked;
             const excludeFish = document.getElementById("exclude-fish").checked;
             const excludeVegetarian = document.getElementById("exclude-vegetarian").checked;

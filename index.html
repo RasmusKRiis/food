@@ -14,32 +14,33 @@
     <div id="filter-container">
       <!-- Meat Toggle -->
       <label class="toggle-switch">
-        <input type="checkbox" id="exclude-meat" />
+        <input type="checkbox" id="exclude-meat" aria-label="Exclude meat" />
         <span class="switch-slider">🥩</span>
       </label>
       <!-- Fish Toggle -->
       <label class="toggle-switch">
-        <input type="checkbox" id="exclude-fish" />
+        <input type="checkbox" id="exclude-fish" aria-label="Exclude fish" />
         <span class="switch-slider">🐟</span>
       </label>
       <!-- Vegetarian Toggle -->
       <label class="toggle-switch">
-        <input type="checkbox" id="exclude-vegetarian" />
+        <input type="checkbox" id="exclude-vegetarian" aria-label="Exclude vegetarian" />
         <span class="switch-slider">🍆</span>
       </label>
       <!-- Non-web Toggle -->
       <label class="toggle-switch">
-        <input type="checkbox" id="exclude-non-web" />
+        <input type="checkbox" id="exclude-non-web" aria-label="Exclude non-web" />
         <span class="switch-slider">📖</span>
       </label>
     </div>
+    <input type="text" id="search-bar" aria-label="Search recipes" placeholder="Search recipes" />
 
     <!-- A separate container for the two buttons -->
     <div id="button-row">
-      <!-- Info/Plus sign -->
-      <button id="plus-button" class="plus-button">i</button>
-      <!-- Infinity Button (Dinner for a Week) -->
-      <button id="week-button" class="week-button">+</button>
+      <!-- Info/Save button -->
+      <button id="plus-button" class="plus-button" aria-label="Info">ℹ️</button>
+      <!-- Week plan button -->
+      <button id="week-button" class="week-button" aria-label="Send plan">📧</button>
     </div>
   </header>
 
@@ -49,9 +50,9 @@
       <h2>How to Use</h2>
       <ul>
         <li><strong>Let’s Eat:</strong> Discover a new recipe.</li>
-        <li><strong>+</strong> Save your favorite recipes.</li>	
-        <li><strong>></strong> Email your weekly meal plan and reset saved recipes.</li>
-        <li><strong>Front Page +:</strong> Get 7 random recipes.</li>
+        <li><strong>➕</strong> Save your favorite recipes.</li>
+        <li><strong>📧</strong> Email your weekly meal plan and reset saved recipes.</li>
+        <li><strong>Front Page 📧:</strong> Get 7 random recipes.</li>
       </ul>
       <h2>Cookbooks</h2>
       <p>	
