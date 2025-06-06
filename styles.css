@@ -341,6 +341,7 @@
   /* Move search bar slightly upward and shrink it */
   #search-bar {
     display: none;
+
     margin-top: 0.2em;
     padding: 0.4em 0.6em;
     max-width: 85%;
@@ -376,6 +377,7 @@
 
   /* Remove .plus-button's desktop top/left if needed */
   .plus-button, .week-button, .list-button, .search-button {
+
     top: auto !important;
     left: auto !important;
   }
@@ -546,6 +548,7 @@
     text-align: center;         /* If you prefer left-aligned text on mobile */
   }
 
+
   /* Dice button at the bottom-left */
   #random-recipe-btn-secondary {
     position: fixed;  /* Stick to viewport */
@@ -588,6 +591,7 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
+
   z-index: 9999;
 
   /* Let the entire overlay scroll if content is tall */
@@ -733,4 +737,3 @@
   color: #ff820e;
   font-weight: 600;
 }
-

@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const weekButton = document.getElementById("week-button");
     const listButton = document.getElementById("list-button");
     const searchToggleButton = document.getElementById("search-toggle");
+
     const searchBar = document.getElementById("search-bar");
   
     // Recipe fields
@@ -143,6 +144,7 @@ if (isSelfHosted) {
             weekButton.classList.add("bottom-position");
             listButton.classList.add("bottom-position");
             searchToggleButton.classList.add("bottom-position");
+
           })
           .catch((error) => {
             console.error("Error fetching recipes:", error);
