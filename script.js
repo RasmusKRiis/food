@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const weekButton = document.getElementById("week-button");
 
     const listButton = document.getElementById("list-button");
+    const searchToggleButton = document.getElementById("search-toggle");
 
     const searchBar = document.getElementById("search-bar");
   
@@ -25,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Cookbook Overlay
     const cookbookOverlay = document.getElementById("cookbook-overlay");
     const closeOverlayBtn = document.getElementById("back-btn-overlay"); // Reusing back button to close overlay
-
 
     // List Overlay
     const recipesListOverlay = document.getElementById("recipes-list-overlay");
@@ -144,6 +144,9 @@ if (isSelfHosted) {
             plusButton.classList.add("bottom-position");
             weekButton.classList.add("bottom-position");
             listButton.classList.add("bottom-position");
+
+            searchToggleButton.classList.add("bottom-position");
+
           })
           .catch((error) => {
             console.error("Error fetching recipes:", error);
@@ -334,6 +337,16 @@ if (isSelfHosted) {
     listButton.addEventListener("click", () => {
         populateRecipesList();
         recipesListOverlay.classList.remove("hidden-overlay");
+    });
+
+    // Search toggle (mobile)
+    searchToggleButton.addEventListener("click", () => {
+        if (searchBar.style.display === "block") {
+            searchBar.style.display = "none";
+        } else {
+            searchBar.style.display = "block";
+            searchBar.focus();
+        }
     });
 
     // Close list overlay
