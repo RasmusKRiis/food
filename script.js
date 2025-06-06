@@ -11,8 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Plus and Week buttons in the header
     const plusButton = document.getElementById("plus-button");
     const weekButton = document.getElementById("week-button");
+
     const listButton = document.getElementById("list-button");
     const searchToggleButton = document.getElementById("search-toggle");
+
     const searchBar = document.getElementById("search-bar");
   
     // Recipe fields
@@ -142,7 +144,9 @@ if (isSelfHosted) {
             plusButton.classList.add("bottom-position");
             weekButton.classList.add("bottom-position");
             listButton.classList.add("bottom-position");
+
             searchToggleButton.classList.add("bottom-position");
+
           })
           .catch((error) => {
             console.error("Error fetching recipes:", error);
