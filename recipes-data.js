@@ -1,0 +1,442 @@
+window.recipesData = 
+{
+    "recipes": [
+      {
+        "id": 1,
+        "name": "Cold Crab Ramen",
+        "location": "https://www.cabagges.world/cold-crab-ramen",
+        "mainIngredient": "Crab and Noodles",
+        "type": "fish",
+        "notes": "Takes less than 15 minutes",
+        "ingredients": [
+          {
+              "item": "Lime juice",
+              "quantity": "1 Tbsp"
+          },
+          {
+              "item": "Ramen noodles",
+              "quantity": "350 grams"
+          },
+          {
+            "item": "Clove",
+            "quantity": "1"
+          },
+          {
+              "item": "Crab",
+              "quantity": "1"
+          },
+          {
+              "item": "Lemon",
+              "quantity": "2 Tbsp"
+          },
+          {
+              "item": "Scallion",
+              "quantity": "2"
+          },
+          {
+              "item": "Olive Oil",
+              "quantity": "3 Tbsp"
+          },
+          {
+            "item": "Oyster Sauce",
+            "quantity": "1 Tsp"
+          },
+          {
+            "item": "Mirin",
+            "quantity": "2"
+          },
+          {
+              "item": "Soy Sauce",
+              "quantity": "2,5 Tbsp"
+          },
+          {
+            "item": "Cucumber",
+            "quantity": "1/2"
+          },
+          {
+            "item": "Koriander",
+            "quantity": "1/2 cup"
+          }
+          ]
+        },
+      {
+        "id": 2,
+        "name": "Creamy Potato Soup with Mushroom & Pine Nuts",
+        "location": "https://nomaprojects.com/blogs/recipes/creamy-potato-soup-with-mushroom-pine-nuts",
+        "mainIngredient": "Potato and Mushrooms",
+        "type": "vegetarian",
+        "notes": "May need to order stuff from Noma 💸💸",
+        "ingredients": [
+          {
+              "item": "Potatos",
+              "quantity": "550 grams"
+          },
+          {
+              "item": "Cumin Seeds",
+              "quantity": "5 grams"
+          },
+          {
+            "item": "Garlic Cloves",
+            "quantity": "2"
+          },
+          {
+              "item": "Butter",
+              "quantity": "50 grams"
+          },
+          {
+              "item": "Chicken Stock",
+              "quantity": "700 mL"
+          },
+          {
+              "item": "Cream",
+              "quantity": "100 mL"
+          },
+          {
+              "item": "Milk",
+              "quantity": "50 mL"
+          },
+          {
+            "item": "Mushrooms",
+            "quantity": "200 grams"
+          },
+          {
+            "item": "Pine nuts",
+            "quantity": "40 grams"
+          },
+          {
+              "item": "Mushroom Garum",
+              "quantity": "30 grams"
+          },
+          {
+            "item": "Vegetable Oil",
+            "quantity": "5 grams"
+          }
+          ]
+        },
+      {
+        "id": 3,
+        "name": "Lasagne",
+        "location": "https://www.insidetherustickitchen.com/classic-beef-lasagne-spinach-pasta",
+        "mainIngredient": "Beef, Pork and Tomatos",
+        "type": "meat",
+        "notes": "Replace some meat with an italian susage",
+        "ingredients": [
+          {
+              "item": "Olive Oil",
+              "quantity": "1 Tbsp"
+          },
+          {
+              "item": "Carrot",
+              "quantity": "1"
+          },
+          {
+            "item": "Celery",
+            "quantity": "1"
+          },
+          {
+              "item": "Onion",
+              "quantity": "1"
+          },
+          {
+              "item": "Ground Beef",
+              "quantity": "500 grams"
+          },
+          {
+              "item": "Italian Susage",
+              "quantity": "500 grams"
+          },
+          {
+              "item": "Canned Tomatos",
+              "quantity": "540 grams"
+          },
+          {
+            "item": "Tomato Paste",
+            "quantity": "3 Tbsp"
+          },
+          {
+            "item": "Red Wine",
+            "quantity": "1 Cup"
+          },
+          {
+              "item": "Beef Stock",
+              "quantity": "1,5 L"
+          },
+          {
+            "item": "Bay Leaves",
+            "quantity": "2"
+          },
+          {
+            "item": "Butter",
+            "quantity": "70 grams"
+          },
+          {
+            "item": "Flour",
+            "quantity": "70 grams"
+          },
+          {
+            "item": "Whole Milk",
+            "quantity": "1 L"
+          },
+          {
+            "item": "Nutmeg",
+            "quantity": "1,2 Tsp"
+          },
+          {
+            "item": "Parmesan",
+            "quantity": "70 grams"
+          },
+          {
+            "item": "Lasagna Pasta Sheets",
+            "quantity": "500 grams"
+          },
+          {
+            "item": "Mozzarella",
+            "quantity": "250 grams"
+          }
+          ]
+      },
+      {
+        "id": 4,
+        "name": "Nduja Pasta with Vodka",
+        "location": "https://www.servingdumplings.com/recipe/spicy-pasta-alla-vodka-with-nduja/",
+        "mainIngredient": "Nduja",
+        "type": "meat",
+        "notes": "Quick, say 15 minutes or so",
+        "ingredients": [
+          {
+              "item": "Pasta",
+              "quantity": ""
+          },
+          {
+              "item": "Olive Oil",
+              "quantity": "2 Tbsp"
+          },
+          {
+            "item": "Garlic Cloves",
+            "quantity": "4"
+          },
+          {
+              "item": "Dried Oregano",
+              "quantity": "1 Tsp"
+          },
+          {
+              "item": "Dried Thyme",
+              "quantity": "1 Tsp"
+          },
+          {
+              "item": "Tomato Paste",
+              "quantity": "140 grams"
+          },
+          {
+              "item": "Vodka",
+              "quantity": "1/3 Cup"
+          },
+          {
+            "item": "Cream",
+            "quantity": "1 Cup"
+          },
+          {
+            "item": "Nduja",
+            "quantity": "100 grams"
+          },
+          {
+              "item": "Parmesan",
+              "quantity": "50 grams"
+          }
+          ]
+      },
+      {
+        "id": 5,
+        "name": "Cold Somen",
+        "location": "https://www.cabagges.world/cold-somen-with-ume",
+        "mainIngredient": "Somen and Cucumber",
+        "type": "vegetarian",
+        "notes": "Super fast",
+        "ingredients": [
+          {
+              "item": "Somen Noodles",
+              "quantity": ""
+          },
+          {
+              "item": "Shiso Umeboshi",
+              "quantity": "2"
+          },
+          {
+            "item": "Somen Tsuyu",
+            "quantity": ""
+          },
+          {
+              "item": "Scallion",
+              "quantity": "1"
+          },
+          {
+              "item": "Sesame Seeds",
+              "quantity": ""
+          },
+          {
+              "item": "Mozuku Seaweed",
+              "quantity": ""
+          },
+          {
+              "item": "Cicumber",
+              "quantity": "1/2"
+          }
+          ]
+      },
+      {
+        "id": 6,
+        "name": "Fried Cabbage",
+        "location": "https://www.cabagges.world/mala-charred-cabbage-with-yogurt",
+        "mainIngredient": "Cabbage and Youghurt",
+        "type": "vegetarian",
+        "notes": "As a side or first course"
+      },
+      {
+        "id": 7,
+        "name": "Miso Soup with Beans",
+        "location": "https://www.cabagges.world/miso-beans-and-greens",
+        "mainIngredient": "Miso, Beans and Kale",
+        "type": "vegetarian",
+        "notes": "Healthy stuff, but tasty"
+      },
+      {
+        "id": 8,
+        "name": "Vegetable Lasagne",
+        "location": "https://nomaprojects.com/blogs/recipes/vegetable-lasagna",
+        "mainIngredient": "Spinach, Mushrooms and Leek",
+        "type": "vegetarian",
+        "notes": "Remember salt!"
+      },
+      {
+        "id": 9,
+        "name": "Vegetarian Japanese Curry",
+        "location": "https://nomaprojects.com/blogs/recipes/japanese-style-curry",
+        "mainIngredient": "Mushrooms and Golde Curry",
+        "type": "vegetarian",
+        "notes": "Rice is important"
+      },
+      {
+        "id": 10,
+        "name": "Chicken Tikka Masala",
+        "location": "https://www.joshuaweissman.com/post/chicken-tikka-masala",
+        "mainIngredient": "Chiken, Tomatos and spices",
+        "type": "meat",
+        "notes": "You may need a food processor"
+      },
+      {
+        "id": 11,
+        "name": "Onion Soup",
+        "location": "https://www.youtube.com/watch?v=-DLDMQucqDI&t=153s",
+        "mainIngredient": "Onions",
+        "type": "vegetarian",
+        "notes": "Cook the onions MORE than 30 minutes"
+      },
+      {
+        "id": 12,
+        "name": "Carbonara",
+        "location": "https://www.youtube.com/watch?v=ZCSowIQgHPI&t=631s",
+        "mainIngredient": "Pasta and Guanciale",
+        "type": "meat",
+        "notes": "Use Guanciale, not bacon"
+      },
+      {
+        "id": 13,
+        "name": "Mussels with Parsley Butter",
+        "location": "https://www.facebook.com/groups/692154931610601/permalink/713675342791893/",
+        "mainIngredient": "Mussels and Parsley",
+        "type": "fish",
+        "notes": "Better than you may think"
+      },
+      {
+        "id": 15,
+        "name": "Shortrib BAO",
+        "location": "BAO, ERCHEN CHANG; page 70",
+        "mainIngredient": "Beef Short-Rib",
+        "type": "meat",
+        "notes": "The Baos in this book is perfect"
+      },
+      {
+        "id": 16,
+        "name": "Coconut Bao Loaf",
+        "location": "BAO, ERCHEN CHANG; page 78",
+        "mainIngredient": "Coconut",
+        "type": "vegetarian",
+        "notes": "Also called Cocktail buns"
+      }
+    ,
+      {
+        "id": 17,
+        "name": "00 Flour Focaccia",
+        "location": "MASTERING PIZZA, VETRI, page 220",
+        "mainIngredient": "Flour and Water",
+        "type": "vegetarian",
+        "notes": "Takes time, hours and hours"
+      }
+    ,
+      {
+      "id": 18,
+      "name": "Beef and Rice with Egg-Yolk",
+      "location": "recipes/self/beef-and-rice-with-egg-yolk.html",
+      "mainIngredient": "Beef and Rice",
+      "type": "meat",
+      "notes": "Japanese style",
+      "body": "<ol><li>Cook Japanese Rice</li><li>Cook Beef to Medium Rare</li><li>Separate Egg-Yolk</li><li>Assamble; Rice with cut Beef and Egg-Yolk on Top</li></ol>"
+    }
+    ,
+      {
+      "id": 19,
+      "name": "Yakitori",
+      "location": "ASIATISK, J.R.EKTVEDT, page 120-126",
+      "mainIngredient": "Beef / Pork / Chiken",
+      "type": "meat",
+      "notes": "Japanese BBQ, serve with rice and Cucumber salad"
+    }
+    ,
+      {
+      "id": 20,
+      "name": "Miso Chicken",
+      "location": "ASIATISK, J.R.EKTVEDT, page 124",
+      "mainIngredient": "Chicken and Butter",
+      "type": "meat",
+      "notes": "Just mix 1:1 Miso and Butter -> Marinate chicken"
+    }
+    ,
+      {
+      "id": 21,
+      "name": "Curry Udon",
+      "location": "https://www.justonecookbook.com/curry-udon/",
+      "mainIngredient": "Udon and Curry",
+      "type": "vegetarian",
+      "notes": "Add meat if you want, but work with just onion"
+    }
+    ,
+      {
+      "id": 22,
+      "name": "Chili con Carne",
+      "location": "FOOD LAB, J.K.LOPEZ-ALT, page 261",
+      "mainIngredient": "Beef and Onion",
+      "type": "meat",
+      "notes": "Serve with Diced Onion and Sour Cream"
+    }
+    ,
+      {
+      "id": 23,
+      "name": "Pesto Pasta",
+      "location": "recipes/self/pesto-pasta.html",
+      "mainIngredient": "Pasta and Pesto",
+      "type": "vegetarian",
+      "notes": "Pesto from SALT, FAT, ACID and HEAT is all you need",
+      "body": "<ol><li>Boil Pasta</li><li>Make Pesto</li><li>Mix Pasta and Pesto with a splash of Pasta Water</li></ol>"
+    }
+    ,
+      {
+      "id": 24,
+      "name": "Asparagus Pasta",
+      "location": "recipes/self/asparagus-pasta.html",
+      "mainIngredient": "Pasta and Asparagus",
+      "type": "vegetarian",
+      "notes": "https://www.instagram.com/reel/DI4A4cKtA7D/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==",
+      "body": "<ol><li>Make Chili Panko (optional)</li><li>Boil Pasta</li><li>Over medium heat, melt butter and olive oil together. Add in shallots (1) and garlic (1). Add asparagus, chopped into 2 cm pieces.</li><li>Add in Pasta along with the chicken stock (0,5 dl), stirring for 1 min. Stir in creme fraiche (2 Tbsp) and a squeeze of lemon juice (). Top with shaved parm, and season with with salt and pepper</li></ol>"
+    }
+  ]
+};

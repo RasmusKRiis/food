@@ -1,0 +1,15 @@
+{
+  "name": "Random Recipe Picker",
+  "short_name": "Recipes",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#118AB2",
+  "theme_color": "#FFD166",
+  "icons": [
+    {
+      "src": "images/chicken_soup.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
